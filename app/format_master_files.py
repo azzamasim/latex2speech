@@ -12,7 +12,7 @@ def found_input_file(line, outfile, i, input):
     while(line[i] != '}'):
         tmp = tmp + line[i]                          
 
-        # Checks if input/include keyword was found in list of fiels
+        # Checks if input/include keyword was found in list of files
         for input_file in input:
             append = tmp
 
@@ -40,7 +40,7 @@ def found_bibliography_file(line, outfile, i, bib, inner_file):
     while(line[i] != '}'):
         tmp = tmp + line[i]                          
 
-        # Checks if bibliography keyword was found in list of fiels
+        # Checks if bibliography keyword was found in list of files
         for bib_file in bib:
             append = tmp
 

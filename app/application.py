@@ -52,7 +52,7 @@ def add_to_array(uploadName, extension):
 
     return array
 
-# Helepr function to delete files
+# Helper function to delete files
 def delete_from_folder():
     files = glob.glob(app.config['UPLOADED_PATH'] + "/*")
     final = glob.glob(app.config['CUSTOM_STATIC_PATH'] + "/*.tex")
@@ -229,7 +229,7 @@ def handle_form():
     math_error_type = request.form.get('math_error_type')
     math_error_message = request.form.get('math_error_message')
     math_error_breaktime = request.form.get('math_error_breaktime')
-    math_perentheses = request.form.get('quantity_method')
+    math_parentheses = request.form.get('quantity_method')
     bold = request.form.get('bold')
     bold_emphasis = request.form.get('bold_emphasis')
     bold_prosody_rate = request.form.get('bold_prosody_rate')
@@ -242,10 +242,10 @@ def handle_form():
     if voice != 'Joanna':
         doc['VOICE_ID']['CONFIG'] = voice
 
-    # Math perentheses is not none or default
-    if math_perentheses != 'None' or math_perentheses != 'parentheses_numbered':
+    # Math parentheses is not none or default
+    if math_parentheses != 'None' or math_parentheses != 'parentheses_numbered':
         doc['QUANTITY_MODE']['CONFIG']['TYPE'] = 'Quantity'
-        doc['QUANTITY_MODE']['CONFIG']['QUANTITY_METHOD'] = math_perentheses
+        doc['QUANTITY_MODE']['CONFIG']['QUANTITY_METHOD'] = math_parentheses
 
     # Math mode Error
     if math_error_type == 'Message':
