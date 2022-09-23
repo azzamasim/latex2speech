@@ -239,8 +239,8 @@ def handle_form():
     with open('app_config.yaml') as f:
         doc = yaml.load(f)
 
-    if voice != 'Joanna':
-        doc['VOICE_ID']['CONFIG'] = voice
+    if voice != 'Joanna':m        
+    doc['VOICE_ID']['CONFIG'] = voice
 
     # Math parentheses is not none or default
     if math_parentheses != 'None' or math_parentheses != 'parentheses_numbered':
