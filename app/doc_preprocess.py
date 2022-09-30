@@ -7,7 +7,7 @@ def doc_preprocess(file_name):
         text = file.read()
 
         # Remove comments (handled elsewhere but better safe than sorry)
-        text = re.sub(r'(^.*?)(?=%.*$)', r'\0', text, flags=re.MULTILINE)
+        # text = re.sub(r'(^.*?)(?=%.*$)', r'\0', text, flags=re.MULTILINE)
 
         # Remove \left and \right
         text = re.sub(r'\\left|\\right', '', text)
